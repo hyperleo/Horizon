@@ -1,9 +1,8 @@
 {
   "ai": {
-    "provider": "deepseek",
-    "model": "deepseek-v4-flash",
-    "base_url": "https://api.deepseek.com",
-    "api_key_env": "DEEPSEEK_API_KEY",
+    "provider": "gemini",
+    "model": "gemini-2.0-flash",
+    "api_key_env": "GOOGLE_API_KEY",
     "temperature": 0.3,
     "max_tokens": 8192,
     "throttle_sec": 1,
@@ -31,6 +30,9 @@
         "topic_dedup": true
       }
     }
+  },
+  "display": {
+    "icon_style": "emoji"
   },
   "sources": {
     "github": [
@@ -78,7 +80,7 @@
       },
       {
         "name": "vLLM Blog",
-        "url": "https://vllm.ai/blog/rss.xml",
+        "url": "https://blog.vllm.ai/feed",
         "enabled": true,
         "category": "llm-inference",
         "profile": "tech-blog",
@@ -174,7 +176,7 @@
     "default_group_limit": null
   },
   "webhook": {
-    "enabled": true,
+    "enabled": false,
     "url_env": "HORIZON_WEBHOOK_URL",
     "delivery": "summary_and_items",
     "overview_position": "last",
@@ -209,5 +211,12 @@
       }
     },
     "headers": ""
+  },
+  "wechat": {
+    "enabled": true,
+    "languages": [
+      "zh"
+    ],
+    "chunk_size": 4000
   }
 }
