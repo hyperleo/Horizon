@@ -39,7 +39,7 @@ jobs:
         run: |
           printf '%s' "$WECHAT_SESSION_JSON" > data/wechat_session.json
           wc -c data/wechat_session.json
-        python3 -c "import json; d=json.load(open('data/wechat_session.json')); print('keys:', sorted(d.keys())); print('bot_token present:', bool(d.get('bot_token')), '| user_id present:', bool(d.get('user_id')), '| context present:', bool(d.get('context_token')))"
+          python3 -c "import json; d=json.load(open('data/wechat_session.json')); print('keys:', sorted(d.keys())); print('bot_token present:', bool(d.get('bot_token')), '| user_id present:', bool(d.get('user_id')), '| context present:', bool(d.get('context_token')))"
 
       - name: Run Horizon
         env:
