@@ -36,8 +36,8 @@ jobs:
       - name: Restore WeChat session
         env:
           WECHAT_SESSION_JSON: ${{ secrets.WECHAT_SESSION_JSON }}
-      run: |
-        if [ -n "$WECHAT_SESSION_JSON"]; then printf '%s' "$WECHAT_SESSION_JSON" > data/wechat_session.json; fi
+        run: |
+          if [ -n "$WECHAT_SESSION_JSON"]; then printf '%s' "$WECHAT_SESSION_JSON" > data/wechat_session.json; fi
 
       - name: Run Horizon
         env:
